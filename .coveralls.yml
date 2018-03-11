@@ -1,1 +1,7 @@
-repo_token: FfkHzitE2ijARoDpbegwu9UaouRKu7pOH
+service_name: travis-ci
+
+repo_token: 194bSqvD35VhfKv8Yig9sS1x6URk5BX4e
+
+coverage_clover: ./tests/build/logs/logs/clover.xml
+
+exclude_no_stmt: true

@@ -20,7 +20,11 @@
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-html" target="./tests/build/logs/test-reports" charset="UTF-8"
+             yui="true" highlight="true"
+             lowUpperBound="50" highLowerBound="80" />
+        <log type="coverage-clover" target="./tests/build/logs/clover.xml"/>
+        <log type="coverage-php" target="./tests/build/cov/coverage.cov"/>
     </logging>
     <php>
         <env name="APP_ENV" value="testing"/>
