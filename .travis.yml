@@ -3,7 +3,6 @@ language: php
 php:
     - '7.1'
 
-
 services:
   - postgresql
 
@@ -14,6 +13,9 @@ before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 
 script:
-  - vendor/bin/phpunit
+  - mkdir -p ./tests/build/logs
+  - php vendor/bin/phpunit -c phpunit.xml
 
-after_script: ./codeclimate.sh
+after_success:
+  - travis_retry php vendor/bin/php-coveralls
+

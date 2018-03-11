@@ -1,0 +1,146 @@
+<?php
+$coverage = new SebastianBergmann\CodeCoverage\CodeCoverage;
+$coverage->setData(array (
+  '/Users/andela/Documents/more_recipes/app/Providers/EventServiceProvider.php' => 
+  array (
+  ),
+  '/Users/andela/Documents/more_recipes/app/Http/Controllers/Controller.php' => 
+  array (
+  ),
+  '/Users/andela/Documents/more_recipes/app/Providers/AuthServiceProvider.php' => 
+  array (
+    19 => 
+    array (
+    ),
+    34 => 
+    array (
+    ),
+    35 => 
+    array (
+    ),
+    37 => 
+    array (
+    ),
+    38 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Console/Kernel.php' => 
+  array (
+    28 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Http/Controllers/ExampleController.php' => 
+  array (
+    15 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Providers/AppServiceProvider.php' => 
+  array (
+    17 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Events/Event.php' => 
+  array (
+  ),
+  '/Users/andela/Documents/more_recipes/app/Jobs/Job.php' => 
+  array (
+  ),
+  '/Users/andela/Documents/more_recipes/app/Http/Middleware/Authenticate.php' => 
+  array (
+    25 => 
+    array (
+    ),
+    26 => 
+    array (
+    ),
+    38 => 
+    array (
+    ),
+    39 => 
+    array (
+    ),
+    42 => 
+    array (
+    ),
+    43 => NULL,
+  ),
+  '/Users/andela/Documents/more_recipes/app/Events/ExampleEvent.php' => 
+  array (
+    15 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Jobs/ExampleJob.php' => 
+  array (
+    15 => 
+    array (
+    ),
+    25 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Listeners/ExampleListener.php' => 
+  array (
+    19 => 
+    array (
+    ),
+    30 => 
+    array (
+    ),
+  ),
+  '/Users/andela/Documents/more_recipes/app/Exceptions/Handler.php' => 
+  array (
+    36 => 
+    array (
+    ),
+    37 => 
+    array (
+    ),
+    48 => 
+    array (
+    ),
+    49 => NULL,
+  ),
+  '/Users/andela/Documents/more_recipes/app/Http/Middleware/ExampleMiddleware.php' => 
+  array (
+    18 => 
+    array (
+    ),
+    19 => NULL,
+  ),
+  '/Users/andela/Documents/more_recipes/app/User.php' => 
+  array (
+  ),
+));
+$coverage->setTests(array (
+  'UNCOVERED_FILES_FROM_WHITELIST' => 
+  array (
+    'size' => 'unknown',
+    'status' => NULL,
+  ),
+));
+
+$filter = $coverage->filter();
+$filter->setWhitelistedFiles(array (
+  '/Users/andela/Documents/more_recipes/app/Console/Kernel.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Events/Event.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Events/ExampleEvent.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Exceptions/Handler.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Http/Controllers/Controller.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Http/Controllers/ExampleController.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Http/Middleware/Authenticate.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Http/Middleware/ExampleMiddleware.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Jobs/ExampleJob.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Jobs/Job.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Listeners/ExampleListener.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Providers/AppServiceProvider.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Providers/AuthServiceProvider.php' => true,
+  '/Users/andela/Documents/more_recipes/app/Providers/EventServiceProvider.php' => true,
+  '/Users/andela/Documents/more_recipes/app/User.php' => true,
+));
+
+return $coverage;
