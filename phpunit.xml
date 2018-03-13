@@ -28,6 +28,7 @@
     </logging>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="DB_DATABASE" value="more-recipes-test" />
         <env name="CACHE_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
