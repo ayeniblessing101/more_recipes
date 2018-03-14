@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1520777932">
-  <project timestamp="1520777932">
+<coverage generated="1520932288">
+  <project timestamp="1520932288">
     <package name="App\Console">
       <file name="/Users/andela/Documents/more_recipes/app/Console/Kernel.php">
         <class name="App\Console\Kernel" namespace="App\Console">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
         </class>
-        <line num="25" type="method" name="schedule" visibility="protected" complexity="1" crap="2.00" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <metrics loc="29" ncloc="14" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="25" type="method" name="schedule" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </file>
     </package>
     <package name="App\Events">
@@ -30,14 +30,14 @@
     <package name="App\Exceptions">
       <file name="/Users/andela/Documents/more_recipes/app/Exceptions/Handler.php">
         <class name="App\Exceptions\Handler" namespace="App\Exceptions">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
         </class>
-        <line num="34" type="method" name="report" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="46" type="method" name="render" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <metrics loc="50" ncloc="30" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+        <line num="34" type="method" name="report" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="46" type="method" name="render" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <metrics loc="50" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="5" coveredelements="5"/>
       </file>
     </package>
     <package name="App\Http\Controllers">
@@ -54,6 +54,32 @@
         <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
         <line num="15" type="stmt" count="0"/>
         <metrics loc="18" ncloc="9" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/Users/andela/Documents/more_recipes/app/Http/Controllers/UserController.php">
+        <class name="App\Http\Controllers\UserController" namespace="App\Http\Controllers">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
+        </class>
+        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="29" type="method" name="store" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <metrics loc="58" ncloc="42" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
       </file>
     </package>
     <package name="App\Http\Middleware">
@@ -112,24 +138,25 @@
     <package name="App\Providers">
       <file name="/Users/andela/Documents/more_recipes/app/Providers/AppServiceProvider.php">
         <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="14" type="method" name="register" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="17" type="stmt" count="0"/>
-        <metrics loc="18" ncloc="11" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        <line num="14" type="method" name="register" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="17" type="stmt" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <metrics loc="19" ncloc="12" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
       <file name="/Users/andela/Documents/more_recipes/app/Providers/AuthServiceProvider.php">
         <class name="App\Providers\AuthServiceProvider" namespace="App\Providers">
-          <metrics complexity="5" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+          <metrics complexity="5" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="2" elements="6" coveredelements="3"/>
         </class>
-        <line num="16" type="method" name="register" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="33" type="method" name="anonymousFunction:33#94" complexity="2" crap="6.00" count="0"/>
+        <line num="16" type="method" name="register" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="33" type="method" name="anonymousFunction:33#94" complexity="2" crap="3.19" count="3"/>
         <line num="34" type="stmt" count="0"/>
         <line num="35" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <metrics loc="39" ncloc="19" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <metrics loc="39" ncloc="19" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="7" coveredelements="4"/>
       </file>
       <file name="/Users/andela/Documents/more_recipes/app/Providers/EventServiceProvider.php">
         <class name="App\Providers\EventServiceProvider" namespace="App\Providers">
@@ -141,11 +168,15 @@
     <package name="App">
       <file name="/Users/andela/Documents/more_recipes/app/User.php">
         <class name="App\User" namespace="App">
-          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
         </class>
-        <metrics loc="32" ncloc="22" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        <line num="34" type="method" name="getJWTIdentifier" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="39" type="method" name="getJWTCustomClaims" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <metrics loc="43" ncloc="33" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
       </file>
     </package>
-    <metrics files="15" loc="386" ncloc="226" classes="10" methods="15" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="0" elements="37" coveredelements="0"/>
+    <metrics files="16" loc="456" ncloc="280" classes="12" methods="19" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="43" coveredstatements="29" elements="62" coveredelements="38"/>
   </project>
 </coverage>

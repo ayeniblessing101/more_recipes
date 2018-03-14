@@ -18,3 +18,8 @@ $router->get('/', function () use ($router) {
 $router->get('/key', function () use ($router) {
   return str_random(32);
 });
+
+
+$router->group(['prefix' => '/api/v1'], function () use ($router) {
+  $router->post('/users', ['uses' => 'UserController@store']);
+});
