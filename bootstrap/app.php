@@ -23,8 +23,13 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-$app->withFacades();
-
+$app->withFacades(
+    //Tymon\JWTAuth\Facades\JWTAuth::class => 'JWTAuth',
+    //Tymon\JWTAuth\Facades\JWTFactory::class => 'JWTFactory');
+);
+if (!class_exists('JWTAuth')) {
+    class_alias('Tymon\JWTAuth\Facades\JWTAuth', 'JWTAuth');
+}
 $app->withEloquent();
 
 /*

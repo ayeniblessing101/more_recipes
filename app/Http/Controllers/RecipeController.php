@@ -6,6 +6,13 @@ use App\Recipe;
 
 class RecipeController extends Controller 
 {
+  /**
+   * Create a new Recipe
+   * 
+   * @param Request $request request
+   * 
+   * @return \Illuminate\Http\JsonResponse
+   */
   public function store(Request $request) 
   {
     $this->validate($request, [
@@ -26,5 +33,20 @@ class RecipeController extends Controller
       'data' => $recipe,
       'created' => true,
     ], $statusCode);
+  }
+
+  /**
+   * Edit a recipe
+   * 
+   * @param 
+   */
+  public function update(Request $request, $recipeId)
+  {
+    $recipe = Recipe::findOrFail($recipeId);
+
+    $recipe->fill($request->all());
+    $recipe->save();
+
+    return $recipe;
   }
 }
