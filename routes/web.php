@@ -21,5 +21,6 @@ $router->get('/key', function () use ($router) {
 
 
 $router->group(['prefix' => '/api/v1'], function () use ($router) {
-  $router->post('/users', ['uses' => 'UserController@store']);
+  $router->post('/users/signup', ['uses' => 'UserController@store']);
+  $router->post('users/login', ['uses' => 'UserController@login']);
 });
