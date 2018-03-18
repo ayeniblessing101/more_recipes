@@ -13,6 +13,7 @@ use App\User;
 class UserControllerTest extends TestCase
 {
   use DatabaseMigrations;
+
   /**
    * Test should store a new user in database
    *
@@ -20,7 +21,7 @@ class UserControllerTest extends TestCase
    */
   public function testShouldStoreANewUserInTheDatabase()
   {
-    $this->post('/api/v1/users', [
+    $this->post('/api/v1/users/signup', [
       'firstname' => 'Adebola',
       'lastname' => 'Akinlabi',
       'email' => 'adebola.akinlabi@gmail.com',
@@ -35,16 +36,21 @@ class UserControllerTest extends TestCase
 
   }
 
+  /**
+   * Test should throw an error if email already exist
+   *
+   * @return void
+   */
   public function testShouldThrowAnErrorIfEmailIsTaken()
   {
-     $user = factory(User::class)->create([
-       'firstname' => 'Tobi',
-       'lastname' => 'Mayowa',
-       'email' => 'adebola.akinlabi@gmail.com',
-       'password' => '1234'
-     ]);
+    $user = factory(User::class)->create([
+      'firstname' => 'Tobi',
+      'lastname' => 'Mayowa',
+      'email' => 'adebola.akinlabi@gmail.com',
+      'password' => '1234'
+    ]);
 
-     $this->post('/api/v1/users', [
+    $this->post('/api/v1/users/signup', [
       'firstname' => 'Tobi',
       'lastname' => 'Mayowa',
       'email' => 'adebola.akinlabi@gmail.com',
@@ -57,7 +63,32 @@ class UserControllerTest extends TestCase
         "email" => [
           "The email has already been taken."
         ]
-      ]);
+    ]);
   }
 
+  /**
+   * Test should succuessfully autheticate a user
+   *
+   * @return void
+   */
+  public function testShouldAuntheticateAUser()
+  {
+    $user = factory(User::class)->create([
+      'firstname' => 'Taiwo',
+      'lastname' => 'Ajayi',
+      'email' => 'taiwo.ajayi@gmail.com',
+      'password' => '1234'
+    ]);
+
+    $this->post('/api/v1/users/login', [
+      'email' => 'taiwo.ajayi@gmail.com',
+      'password' => '1234'
+    ]);
+
+    $this
+      ->seeStatusCode(200)
+      ->seeJson([
+        'message' => ['Login Successful']
+      ]);
+  }
 }
