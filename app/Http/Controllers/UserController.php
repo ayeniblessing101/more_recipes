@@ -22,7 +22,7 @@ class UserController extends Controller
    *
    * @param Request $request request
    *
-   * @request \Illuminate\Http\JsonResponse
+   * @return \Illuminate\Http\JsonResponse
    */
   public function store(Request $request)
   {
@@ -55,7 +55,7 @@ class UserController extends Controller
    *
    * @param Request $request request
    *
-   * @request \Illuminate\Http\JsonResponse
+   * @return \Illuminate\Http\JsonResponse
    */
   public function login(Request $request)
   {

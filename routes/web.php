@@ -25,5 +25,6 @@ $router->group(['prefix' => '/api/v1'], function () use ($router) {
 });
 
 $router->group(['prefix' => '/api/v1', 'middleware' => 'auth'], function () use ($router) {
-  $router->post('/recipe', ['uses' => 'RecipeController@store']);
+  $router->post('/recipes', ['uses' => 'RecipeController@store']);
+  $router->put('/recipes/{id}', ['uses' => 'RecipeController@update']);
 });

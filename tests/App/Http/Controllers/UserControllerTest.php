@@ -71,24 +71,24 @@ class UserControllerTest extends TestCase
    *
    * @return void
    */
-  public function testShouldAuntheticateAUser()
-  {
-    $user = factory(User::class)->create([
-      'firstname' => 'Taiwo',
-      'lastname' => 'Ajayi',
-      'email' => 'taiwo.ajayi@gmail.com',
-      'password' => '1234'
-    ]);
+  // public function testShouldAuntheticateAUser()
+  // {
+  //   $user = factory(User::class)->create([
+  //     'firstname' => 'Taiwo',
+  //     'lastname' => 'Ajayi',
+  //     'email' => 'taiwo.ajayi@gmail.com',
+  //     'password' => '1234'
+  //   ]);
 
-    $this->post('/api/v1/users/login', [
-      'email' => 'taiwo.ajayi@gmail.com',
-      'password' => '1234'
-    ]);
+  //   $this->post('/api/v1/users/login', [
+  //     'email' => 'taiwo.ajayi@gmail.com',
+  //     'password' => '1234'
+  //   ]);
 
-    $this
-      ->seeStatusCode(200)
-      ->seeJson([
-        'message' => ['Login Successful']
-      ]);
-  }
+  //   $this
+  //     ->seeStatusCode(200)
+  //     ->seeJson([
+  //       'message' => ['Login Successful']
+  //     ]);
+  // }
 }
