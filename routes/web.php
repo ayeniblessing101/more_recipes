@@ -19,8 +19,11 @@ $router->get('/key', function () use ($router) {
   return str_random(32);
 });
 
-
 $router->group(['prefix' => '/api/v1'], function () use ($router) {
   $router->post('/users/signup', ['uses' => 'UserController@store']);
-  $router->post('users/login', ['uses' => 'UserController@login']);
+  $router->post('users/login', ['uses' =>'UserController@login']);
+});
+
+$router->group(['prefix' => '/api/v1', 'middleware' => 'auth'], function () use ($router) {
+  $router->post('/recipe', ['uses' => 'RecipeController@store']);
 });

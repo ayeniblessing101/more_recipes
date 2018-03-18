@@ -33,16 +33,16 @@ class UserController extends Controller
       'password' => 'required',
     ]);
     $user = new User();
-    // dd($user);
+   
     $user->firstname = $request->firstname;
     $user->lastname = $request->lastname;
     $user->email = $request->email;
     $user->password = (new BcryptHasher)->make($request->password);
     $user->save();
     $statusCode = $user ? 201 : 422;
-    // dd($user);
+   
     $token = $this->jwt->attempt($request->only('email', 'password'));
-    // dd($token);
+   
     return response()
       ->json([
         'data' => $user,
@@ -81,7 +81,6 @@ class UserController extends Controller
     {
       return response()->json(['message' => $e->getMessage()],500);
     }
-    
     return response()->json([
         'message' => 'Login Successful',
         'token' => $token],
