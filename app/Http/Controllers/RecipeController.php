@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Recipe;
+use Auth;
 
 class RecipeController extends Controller 
 {
@@ -19,10 +20,11 @@ class RecipeController extends Controller
       'name' => 'required',
       'description' => 'required'
     ]);
-
+    
     $data = [
       'name' => $request->name,
-      'description' => $request->description
+      'description' => $request->description,
+      'user_id' => Auth::user()->id
     ];
 
     $recipe = Recipe::create($data);
@@ -38,15 +40,40 @@ class RecipeController extends Controller
   /**
    * Edit a recipe
    * 
-   * @param 
+   * @param $request
+   * @param $recipeId
+   * 
+   * @return \Illuminate\Http\JsonResponse
    */
   public function update(Request $request, $recipeId)
   {
-    $recipe = Recipe::findOrFail($recipeId);
+    $recipe = Recipe::find($recipeId)
+                ->where('user_id', Auth::user()->id)
+                ->get();
 
     $recipe->fill($request->all());
     $recipe->save();
 
-    return $recipe;
+    return response()->json([$recipe], 200);
+  }
+
+  /**
+   * Delete a recipe
+   * 
+   * @param $recipeId
+   * 
+   * @return \Illuminate\Http\JsonResponse
+   */
+  public function delete($recipeId)
+  {
+    $recipe = Recipe::find($recipeId)
+                ->where('user_id', Auth::user()->id)
+                ->get();
+
+    $recipe->delete();
+
+    return response()->json([
+      'message' => 'Recipe deleted successfully'
+    ], 204);
   }
 }
