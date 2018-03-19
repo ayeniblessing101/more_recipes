@@ -23,6 +23,14 @@ class User extends Model implements JWTSubject, AuthenticatableContract, Authori
     ];
 
     /**
+     * Get the recipes for a user
+     */
+    public function recipes() 
+    {
+        return $this->hasMany('App\Recipe');
+    }
+
+    /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
