@@ -7,6 +7,34 @@ use Auth;
 
 class RecipeController extends Controller 
 {
+   /**
+   * Get all Recipes
+   * 
+   * @return \Illuminate\Http\JsonResponse
+   */
+  public function getAllRecipes() 
+  {
+    $recipes = Recipe::all();
+
+    return response()->json(
+      $recipes, 200
+    );
+  }
+
+  /**
+   * Get a Recipe
+   * 
+   * @return \Illuminate\Http\JsonResponse
+   */
+  public function getARecipe($recipeId) 
+  {
+    $recipe = Recipe::findOrFail($recipeId);
+
+    return response()->json(
+      $recipe, 200
+    );
+  }
+
   /**
    * Create a new Recipe
    * 

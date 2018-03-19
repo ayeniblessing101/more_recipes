@@ -25,6 +25,8 @@ $router->group(['prefix' => '/api/v1'], function () use ($router) {
 });
 
 $router->group(['prefix' => '/api/v1', 'middleware' => 'auth'], function () use ($router) {
+  $router->get('/recipes', ['uses' => 'RecipeController@getAllRecipes']);
+  $router->get('/recipes/{id}', ['uses' => 'RecipeController@getARecipe']);
   $router->post('/recipes', ['uses' => 'RecipeController@store']);
   $router->put('/recipes/{id}', ['uses' => 'RecipeController@update']);
   $router->delete('/recipes/{id}', ['uses' => 'RecipeController@delete']);
